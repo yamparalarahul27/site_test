@@ -50,15 +50,7 @@ body {
   background: rgba(100, 116, 139, 0.5);
 }
 
-/* Recharts customization */
-.recharts-cartesian-grid-horizontal line,
-.recharts-cartesian-grid-vertical line {
-  stroke: rgba(148, 163, 184, 0.06);
-}
 
-.recharts-tooltip-cursor {
-  fill: rgba(100, 116, 139, 0.05);
-}
 
 /* Smooth base transitions - exclude transforms for Framer Motion */
 * {
@@ -67,11 +59,7 @@ body {
   transition-duration: 150ms;
 }
 
-/* Remove transition on chart elements */
-.recharts-surface *,
-.recharts-layer * {
-  transition: none !important;
-}
+
 
 /* Typography Scale */
 .font-display {
