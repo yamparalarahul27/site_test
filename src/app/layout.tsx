@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Instrument_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import { Sidebar, Header, MainContent } from "@/components/layout";
-import { WalletContextProvider } from "@/components/providers";
-import { AnimatedBackground } from "@/components/ui";
 
 // Primary body font - clean, modern, highly legible
 const inter = Inter({
@@ -27,14 +24,8 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Deriverse Analytics | Professional Trading Dashboard",
-  description:
-    "Comprehensive trading analytics and portfolio analysis for Deriverse - the next-gen Solana trading ecosystem",
-  keywords: ["Deriverse", "Solana", "Trading", "Analytics", "DeFi", "Crypto"],
-  icons: {
-    icon: "/deriverse-logo.svg",
-    apple: "/deriverse-logo.svg",
-  },
+  title: "Saturn Animation",
+  description: "Minimal Saturn ring background animation on black.",
 };
 
 export default function RootLayout({
@@ -44,16 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body 
-        className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased bg-[#0a0f1a] text-slate-200`}
-        style={{ fontFamily: 'var(--font-inter), system-ui, sans-serif' }}
+      <body
+        className={`${inter.variable} ${instrumentSerif.variable} ${jetbrainsMono.variable} antialiased bg-black text-slate-200`}
+        style={{ fontFamily: "var(--font-inter), system-ui, sans-serif" }}
       >
-        <WalletContextProvider>
-          <AnimatedBackground />
-          <Sidebar />
-          <Header />
-          <MainContent>{children}</MainContent>
-        </WalletContextProvider>
+        <div className="relative min-h-screen z-[2]">{children}</div>
       </body>
     </html>
   );

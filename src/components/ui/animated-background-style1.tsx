@@ -1,16 +1,16 @@
 "use client";
 
 import React from "react";
-import { FlowingLines } from "./flowing-lines";
+import { SaturnAnimation } from "./saturn_animation";
 
-export function AnimatedBackground() {
+export function AnimatedBackgroundStyle1() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none">
       {/* Base dark gradient */}
       <div className="absolute inset-0 bg-[#050a12]" />
-      
-      {/* Subtle ambient glow */}
-      <div 
+
+      {/* Ambient glows */}
+      <div
         className="absolute inset-0"
         style={{
           background: `
@@ -20,20 +20,19 @@ export function AnimatedBackground() {
           `,
         }}
       />
-      
-      {/* Subtle noise texture overlay */}
-      <div 
+
+      {/* Noise texture */}
+      <div
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
         }}
       />
 
-      {/* Flowing wave lines like Deriverse branding */}
-      <FlowingLines />
+      <SaturnAnimation />
 
-      {/* Vignette effect */}
-      <div 
+      {/* Vignette */}
+      <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background: "radial-gradient(ellipse at center, transparent 0%, rgba(2, 6, 23, 0.5) 100%)",
