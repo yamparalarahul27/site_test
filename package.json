@@ -40,5 +40,19 @@
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
     "typescript": "^5"
+  },
+  "overrides": {
+    "qrcode.react": {
+      "react": "$react"
+    },
+    "react-qr-reader": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    },
+    "use-sync-external-store": {
+      "react": "$react"
+    },
+    "@walletconnect/sign-client": "^2.23.7",
+    "@walletconnect/universal-provider": "^2.23.7"
   }
 }
